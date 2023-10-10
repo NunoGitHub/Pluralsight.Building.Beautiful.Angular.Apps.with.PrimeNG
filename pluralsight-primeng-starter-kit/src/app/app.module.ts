@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { MenuModule, PanelModule} from 'primeng/primeng';
+import { ChartModule, InputTextModule, MenuModule, PanelModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
@@ -17,6 +17,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { AlltimesComponent } from './alltimes/alltimes.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { FielderrorsComponent } from './fielderrors/fielderrors.component';
+import { AngularFontAwesomeComponent } from 'angular-font-awesome';
 
 
 const appRoutes: Routes = [
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     AlltimesComponent,
     ProfileComponent,
     SettingsComponent,
-    FielderrorsComponent
+    FielderrorsComponent,
+    AngularFontAwesomeComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MenuModule,
-    PanelModule
+    PanelModule,
+    ChartModule,
+    InputTextModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

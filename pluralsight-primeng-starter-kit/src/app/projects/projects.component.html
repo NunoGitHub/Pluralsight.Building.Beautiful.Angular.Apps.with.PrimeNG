@@ -1,3 +1,19 @@
-<div class="ui-g">
+<form class="ui-g" [formGroup]="projectForm">
+  <p-panel header="Add Project" class="ui-g-12">
+    <div class="ui-g">
+      <label for="projectId" class="ui-g-12 ui-md-2">Project Id*</label>
+      <input pInputText id="projectId" formControlName="projectId" placeholder="Enter your Project Id"
+        class="ui-g-12 ui-md-5">
 
-</div>
+      <div class="ui-g-12 ui-md-5">
+        <div style=" background-color: rgb(255, 85, 0);" class="ui-message ui-messages-error" *ngIf="fieldErrors('projectId')">
+          <i style="color: white; margin-right: 5px;" class="fa fa-close"></i>
+          <span *ngIf="fieldErrors('projectId').required">Project ID required</span>
+          <span *ngIf="fieldErrors('projectId').minlength">Project ID must be 5 characters</span>
+        </div>
+      </div>
+    </div>
+
+  </p-panel>
+
+</form>

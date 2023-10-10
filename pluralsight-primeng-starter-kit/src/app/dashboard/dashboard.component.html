@@ -1,3 +1,43 @@
 <div class="ui-g">
+  <p-panel header="Hours by project (pie)" class="ui-g-12 ui-md-6">
+    <p-chart type="pie" [options]="chartOptions" [data]="hoursByProjectChartData"></p-chart>
+
+  </p-panel>
+
+  <p-panel header="Hours by project (doughnut)" class="ui-g-12 ui-md-6">
+    <p-chart type="doughnut" [data]="hoursByProjectChartData"></p-chart>
+
+  </p-panel>
+</div>
+
+
+
+<div class="ui-g">
+
+  <p-panel header="Hours by project (polarArea)" class="ui-g-12 ui-md-6">
+    <p-chart type="polarArea" [data]="hoursByProjectChartData"></p-chart>
+
+  </p-panel>
+
+  <p-panel header="Hours by project (bar)" class="ui-g-12 ui-md-6">
+    <p-chart type="bar" [data]="hoursByTeamProjectChartData"></p-chart>
+
+  </p-panel>
+
+
+  <p-panel header="Hours by project (LINE)" class="ui-g-12 ui-md-6">
+    <p-chart type="line" [data]="hoursByTeamProjectChartData"></p-chart>
+  </p-panel>
+
+  <p-panel header="Hours by project (radar)" class="ui-g-12 ui-md-6">
+    <p-chart type="radar" [data]="hoursByTeamProjectChartData"></p-chart>
+  </p-panel>
+
+
+  <p-panel header="Hours by project (mixed)" class="ui-g-12 ui-md-6">
+    <p-chart type="bar" [data]="hoursByTeamProjectChartDataMixed"
+    (onDataSelect)="onDataSelect($event)" #mixedChart
+    ></p-chart>
+  </p-panel>
 
 </div>
