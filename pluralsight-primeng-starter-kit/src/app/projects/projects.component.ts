@@ -17,17 +17,17 @@ export class ProjectsComponent  {
 
   ngOnInit(){
     this.projectForm = this.fb.group({
-      projectId: ['', [Validators.required, Validators.minLength(5)]]
+      projectId: ['', [Validators.required, Validators.minLength(5)]],
+      description:['My cool project', [Validators.required, Validators.maxLength(140)]]
     });
   }
 
-  hasErrors(){
+  hasFormErrors(){
     return !this.projectForm.valid;
   }
 
-  fieldErrors(field: string){
-    let controlState = this.projectForm.controls[field];
-    return (controlState.dirty && controlState.errors) ? controlState.errors : null;
+  onSubmit(){
+    alert(JSON.stringify(this.projectForm.value));
   }
 
 

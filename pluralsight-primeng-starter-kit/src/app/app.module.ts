@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ChartModule, InputTextModule, MenuModule, PanelModule} from 'primeng/primeng';
+import { ButtonModule, ChartModule, EditorModule, InputMaskModule, InputTextModule, InputTextareaModule, MenuModule, PanelModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
@@ -53,7 +53,11 @@ const appRoutes: Routes = [
     MenuModule,
     PanelModule,
     ChartModule,
-    InputTextModule
+    InputTextModule,
+    ButtonModule,
+    InputMaskModule,
+    InputTextareaModule,
+    EditorModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

@@ -8,9 +8,18 @@ import { FormGroup } from "@angular/forms";
 })
 export class FielderrorsComponent implements OnInit {
 
+  @Input("form") form: FormGroup
+  @Input("field") fieldName: string;
+  @Input("niceName") niceName:string;
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  fieldErrors(field: string){
+    let controlState = this.form.controls[field];
+    return (controlState.dirty && controlState.errors) ? controlState.errors : null;
   }
 
 }
