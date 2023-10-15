@@ -1,7 +1,7 @@
 
 
-<div style=" background-color: rgb(255, 85, 0);" class="ui-message ui-messages-error" *ngIf="fieldErrors(fieldName)">
-  <i style="color: white; margin-right: 5px;" class="fa fa-close"></i>
+<div style=" background-color: rgb(255, 85, 0); color: white; width: 100%;" class="ui-message ui-messages-error" *ngIf="fieldErrors(fieldName)">
+  <i style=" margin-right: 5px;" class="fa fa-close"></i>
   <span *ngIf="fieldErrors(fieldName).required">{{niceName}} required</span>
   <span *ngIf="fieldErrors(fieldName).minlength">{{niceName}} must be {{fieldErrors(fieldName).minlength.requiredLength}} characters</span>
   <span *ngIf="fieldErrors(fieldName).maxlength">{{niceName}} must not exceed {{fieldErrors(fieldName).maxlength.requiredLength}}</span>

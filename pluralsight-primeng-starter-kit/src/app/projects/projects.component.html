@@ -3,25 +3,48 @@
     <div class="ui-g">
       <label for="projectId" class="ui-g-12 ui-md-2">Project Id*</label>
 
-      <p-inputMask mask="aaa-999" id="projectId" formControlName="projectId" placeholder="ABC-123" slotChar="?" class="ui-g-12 ui-md-5">
+      <p-inputMask mask="aaa-999" id="projectId" formControlName="projectId" placeholder="ABC-123" slotChar="?"
+        class="ui-g-12 ui-md-5">
 
       </p-inputMask>
 
       <div class="ui-g-12 ui-md-5">
         <div class="ui-g">
-          <at-fielderrors [form] ="projectForm" field="projectId" niceName="Project ID"> </at-fielderrors>
+          <at-fielderrors [form]="projectForm" field="projectId" niceName="Project ID"> </at-fielderrors>
 
         </div>
       </div>
 
       <div class="ui-g-12">
         <label for="description" class="ui-g-12">Description</label>
-        <p-editor id="description"  pInputTextarea formControlName="description" class="ui-g-12" [style]="{'height':'200px'}"></p-editor>
+        <p-editor id="description" pInputTextarea formControlName="description" class="ui-g-12"
+          [style]="{'height':'200px'}"></p-editor>
         <div class="ui-g-12">
           <at-fielderrors [form]="projectForm" field="description" niceName="Description"></at-fielderrors>
         </div>
       </div>
 
+      <div class="ui-g-12">
+        <label for="startDate" class="ui-g-12 ui-md-2">Start Date</label>
+        <p-calendar [showIcon]="true" id="startDate" formControlName="startDate" dateFormat="dd/mm/yy"
+          class="ui-g-12 ui-md-5"></p-calendar>
+        <div class="ui-g-12 ui-md-5">
+          <at-fielderrors [form]="projectForm" field="startDate" niceName="start Date"></at-fielderrors>
+        </div>
+      </div>
+
+      <div class="ui-g-12">
+        <p-fieldset legend="projectType" class="ui-g-12" [toggleable]="true" [collapsed]="false">
+          <p-radioButton name="projGroup" label="Front End" value="F" formControlName="projectType"></p-radioButton>
+          <p-radioButton name="projGroup" label="Back End" value="B" formControlName="projectType"></p-radioButton>
+          <p-radioButton name="projGroup" label="Operations" value="O" formControlName="projectType"></p-radioButton>
+        </p-fieldset>
+      </div>
+
+      <div class="ui-g-12" >
+        <label for="devs" class="ui-g-12 ui-md-2">Assigned Devs</label>
+        <p-dropdown id="devs" filter="true" [options]="allDevs" formControlName="selectedDevs" class="ui-g-12 ui-md-10"></p-dropdown>
+      </div>
 
 
       <button pButton type="submit" [disabled]="hasFormErrors()" label="Save" icon="fa fa-floppy-o"></button>

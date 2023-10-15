@@ -2,3 +2,16 @@
   background-color: rgb(255, 85, 0);
   color: white;
 }
+
+label{
+  margin-top: 5px;
+}
+
+button{
+  margin-top: 1em;
+}
+
+p-radioButton{
+  display: block;
+  margin: .7em;
+}
