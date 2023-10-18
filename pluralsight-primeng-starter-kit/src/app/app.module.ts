@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ButtonModule, CalendarModule, ChartModule, DropdownModule, EditorModule, FieldsetModule, InputMaskModule, InputTextModule, InputTextareaModule, MenuModule, PanelModule, RadioButtonModule} from 'primeng/primeng';
+import { ButtonModule, CalendarModule, ChartModule, DropdownModule, EditorModule, FieldsetModule, InputMaskModule, InputTextModule, InputTextareaModule, ListboxModule, MenuModule, MultiSelectModule, PanelModule, RadioButtonModule, SlideMenuModule, SliderModule, SpinnerModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
@@ -61,7 +61,11 @@ const appRoutes: Routes = [
     CalendarModule,
     RadioButtonModule,
     FieldsetModule,
-    DropdownModule
+    DropdownModule,
+    MultiSelectModule,
+    ListboxModule,
+    SpinnerModule,
+    SliderModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]
