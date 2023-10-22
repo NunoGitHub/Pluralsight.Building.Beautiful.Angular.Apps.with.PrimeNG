@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ButtonModule, CalendarModule, ChartModule, DropdownModule, EditorModule, FieldsetModule, InputMaskModule, InputTextModule, InputTextareaModule, ListboxModule, MenuModule, MultiSelectModule, PanelModule, RadioButtonModule, SlideMenuModule, SliderModule, SpinnerModule} from 'primeng/primeng';
+import { ButtonModule, CalendarModule, ChartModule, ConfirmDialogModule, ContextMenuModule, DataGridModule, DataTable, DataTableModule, DialogModule, DragDropModule, DropdownModule, EditorModule, FieldsetModule, GMapModule, GalleriaModule, GrowlModule, InputMaskModule, InputTextModule, InputTextareaModule, ListboxModule, MenuModule, MultiSelectModule, PanelModule, RadioButtonModule, RatingModule, ScheduleModule, SlideMenuModule, SliderModule, SpinnerModule, StepsModule, TabViewModule, TooltipModule, TreeModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
@@ -18,6 +18,7 @@ import { AlltimesComponent } from './alltimes/alltimes.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { FielderrorsComponent } from './fielderrors/fielderrors.component';
 import { AngularFontAwesomeComponent } from 'angular-font-awesome';
+import { TableModule } from 'primeng/table';
 
 
 const appRoutes: Routes = [
@@ -65,7 +66,22 @@ const appRoutes: Routes = [
     MultiSelectModule,
     ListboxModule,
     SpinnerModule,
-    SliderModule
+    SliderModule,
+    RatingModule,
+    DataTableModule,
+    ContextMenuModule,
+    TabViewModule,
+    DialogModule,
+    StepsModule,
+    ScheduleModule,
+    TreeModule,
+    GMapModule,
+    DataGridModule,
+    TooltipModule,
+    ConfirmDialogModule,
+    GrowlModule,
+    DragDropModule,
+    GalleriaModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

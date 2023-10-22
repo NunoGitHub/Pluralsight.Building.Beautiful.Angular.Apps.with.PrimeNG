@@ -35,3 +35,16 @@ p-listbox span{
   float: left;
   margin: 5px;
 }
+
+p-rating >>> .ui-rating a .ui-rating-icon{
+  color: #007ad9;
+  font-size: xx-large;
+}
+p-rating >>> .ui-rating a{
+  font-size: xx-large;
+}
+
+p-rating >>> .ui-rating-cancel a .ui-rating-icon{
+  color: unset;
+  font-size: xx-large;
+}
